@@ -80,7 +80,14 @@ const menu = [
         },
     ]),
     {
-        role: 'fileMenu',
+        label: 'File',
+        submenu: [
+            {
+                label: 'Close',
+                accelerator: 'CmdOrCtrl+Q',
+                role: 'close',
+            },
+        ],
     },
 ]
 
