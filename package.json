@@ -6,7 +6,7 @@
   "author": "Filip Katusin",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "NODE_ENV=development electron .",
     "app:dist:mac": "NODE_ENV=production electron-builder --mac",
     "app:dist:win": "NODE_ENV=production electron-builder --win"
   },
@@ -23,12 +23,14 @@
   "build": {
     "appId": "com.Katusin.ImageResizer",
     "mac": {
-      "target": "dmg"
+      "target": "dmg",
+      "icon": "assets/icons/mac/icon.icns"
     },
     "win": {
       "target": [
         "nsis"
-      ]
+      ],
+      "icon": "assets/icons/win/icon.png"
     }
   }
 }

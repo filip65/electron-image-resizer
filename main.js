@@ -6,7 +6,7 @@ const resizeImg = require('resize-img')
 
 const isMac = process.platform === 'darwin'
 
-const isDev = process.env.NODE_ENV !== 'production'
+const isDev = process.env.NODE_ENV == 'development'
 
 let mainWindow
 
