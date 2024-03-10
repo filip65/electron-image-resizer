@@ -2,17 +2,33 @@
   "name": "electron",
   "productName": "Image Resizer",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple image resizer",
+  "author": "Filip Katusin",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "app:dist:mac": "NODE_ENV=production electron-builder --mac",
+    "app:dist:win": "NODE_ENV=production electron-builder --win"
   },
   "keywords": [],
-  "author": "Filip Katusin",
   "license": "ISC",
   "dependencies": {
-    "electron": "^29.1.1",
     "resize-img": "^2.0.0",
     "toastify-js": "^1.12.0"
+  },
+  "devDependencies": {
+    "electron": "^29.1.1",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.Katusin.ImageResizer",
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
   }
 }
